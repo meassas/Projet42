@@ -6,7 +6,7 @@
 /*   By: meassas <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/13 21:14:50 by meassas           #+#    #+#             */
-/*   Updated: 2016/11/14 17:34:31 by meassas          ###   ########.fr       */
+/*   Updated: 2017/04/11 17:06:04 by meassas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,8 @@
 
 void	ft_putstr(char const *s)
 {
-	int i;
-
-	i = 0;
 	if (!s)
 		return ;
-	while (s[i])
-		ft_putchar(s[i++]);
+	if (*s)
+		write (1, s, ft_strlen(s));
 }
